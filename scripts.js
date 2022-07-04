@@ -22,56 +22,68 @@ function handleTurns() {
     } else {
         turn.innerText = 'O';
         turns++;
-        let answer;
-        console.log(square[2]);
+        let answer = Math.floor(Math.random() * 8 + 1);
         setTimeout(function () {
-            if ((square[2] == 'X' && square[3] == 'X') || (square[4] == 'X' && square[7] == 'X') || (square[5] == 'X' && square[9] == 'X')) {
-                answer = 1;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[3] == 'X' && square[6] == 'X') || (square[1] == 'X' && square[5] == 'X') || (square[7] == 'X' && square[8] == 'X')) {
-                answer = 9;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[2] == 'X' && square[8] == 'X') || (square[1] == 'X' && square[9] == 'X') || (square[4] == 'X' && square[6] == 'X') || (square[7] == 'X' && square[3] == 'X')) {
-                answer = 5;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[1] == 'X' && square[3] == 'X') || (square[5] == 'X' && square[8] == 'X')) {
-                answer = 2;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[7] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[2] == 'X')) {
-                answer = 8;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[1] == 'X' && square[7] == 'X') || (square[5] == 'X' && square[6] == 'X')) {
-                answer = 4;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[1] == 'X' && square[4] == 'X') || (square[8] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[3] == 'X')) {
-                answer = 7;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[1] == 'X' && square[2] == 'X') || (square[6] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[7] == 'X')) {
-                answer = 3;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if ((square[3] == 'X' && square[9] == 'X') || (square[4] == 'X' && square[5] == 'X')) {
-                answer = 6;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
+                if (((square[2] == 'X' && square[3] == 'X') || (square[4] == 'X' && square[7] == 'X') || (square[5] == 'X' && square[9] == 'X')) && square[1] == '') {
+                    answer = 1;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[3] == 'X' && square[6] == 'X') || (square[1] == 'X' && square[5] == 'X') || (square[7] == 'X' && square[8] == 'X')) && square[9] == '') {
+                    answer = 9;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[2] == 'X' && square[8] == 'X') || (square[1] == 'X' && square[9] == 'X') || (square[4] == 'X' && square[6] == 'X') || (square[7] == 'X' && square[3] == 'X')) && square[5] == '') {
+                    answer = 5;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[1] == 'X' && square[3] == 'X') || (square[5] == 'X' && square[8] == 'X')) && square[2] == '') {
+                    answer = 2;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[7] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[2] == 'X')) && square[8] == '') {
+                    answer = 8;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[1] == 'X' && square[7] == 'X') || (square[5] == 'X' && square[6] == 'X')) && square[4] == '') {
+                    answer = 4;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[1] == 'X' && square[4] == 'X') || (square[8] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[3] == 'X')) && square[7] == '') {
+                    answer = 7;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[1] == 'X' && square[2] == 'X') || (square[6] == 'X' && square[9] == 'X') || (square[5] == 'X' && square[7] == 'X')) && square[3] == '') {
+                    answer = 3;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                } else if (((square[3] == 'X' && square[9] == 'X') || (square[4] === 'X' && square[5] === 'X')) && square[6] == '') {
+                    answer = 6;
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    square[answer].style.color = '#ECAE35';
+                    console.log('6 test')
+                } else if (square[answer] != 'X' && square[answer] != 'O') {
+                    square[answer] = document.getElementById('square' + answer);
+                    square[answer].innerHTML = 'O';
+                    turn.innerText = 'X';
+                    console.log('no way');
+                    square[answer].style.color = '#ECAE35';
+                    console.log(square[1] == '');
+                }
+                console.log(answer);
+
             }
-        }, 1000)
+            ,
+            800
+        )
     }
 
 }
