@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    body {
+        background: #192A32;
+    }
+
+    .x {
+        color: #33C3BF;
+    }
+    .fade{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .shadow-bg{
+        background: rgba(0,0,0,0.5);
+        transition: opacity 2s;
+        z-index: 10;
+    }
+    div.shadow-bg > div{
+        z-index: -10;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>x-o game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="main-div" class="flex w-full h-screen place-items-center justify-center">
+    <div class="w-1/4">
+        <div class="flex justify-between place-items-center">
+            <div class="flex cursor-default">
+                <p class="mr-2 text-[#33C3BF] font-black text-2xl">X</p>
+                <p class="text-[#ECAE35] font-black text-2xl ">O</p>
+            </div>
+            <div class="bg-white/5 rounded py-2 px-6 cursor-default shadow-lg">
+                <p class="text-[#A6BCC7] uppercase font-black "><span class="mr-2" id="turn"></span>Turn</p>
+            </div>
+            <div class="bg-[#A6BCC7] w-10 h-10 rounded-lg cursor-pointer flex justify-center place-items-center" id="reload"><img src="images/icons8-restart.svg"></div>
+        </div>
+        <div class="flex flex-wrap justify-between w-full -z-10">
+            <div id="square1"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square2"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square3"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square4"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square5"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square6"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square7"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square8"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div id="square9"
+                 class="w-32 h-28 rounded-lg duration-500 shadow-xl mt-10 bg-gray-600/20 cursor-pointer button flex justify-center place-items-center font-black text-6xl"></div>
+            <div class="w-32 -z-10 h-14 rounded-lg flex flex-col justify-center place-items-center shadow-xl mt-10 bg-[#31C4BE] cursor-default">
+                <p class="uppercase font-medium text-sm">x (you)</p>
+                <p class="font-black text-xl" id="player">0</p>
+            </div>
+            <div class="w-32 h-14 -z-10 rounded-lg flex flex-col justify-center place-items-center shadow-xl mt-10 bg-[#A6BCC7] cursor-default">
+                <p class="uppercase font-medium text-sm">ties</p>
+                <p class="font-black text-xl" id="draw">0</p>
+            </div>
+            <div class="w-32 h-14 -z-10 rounded-lg flex flex-col justify-center place-items-center shadow-xl mt-10 bg-[#F2B237] cursor-default">
+                <p class="uppercase font-medium text-sm">O (CPU)</p>
+                <p class="font-black text-xl" id="cpu">0</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="banner" class="w-full h-fit py-8 fade bg-[#1F3540] flex-col place-items-center opacity-0 -z-10 ease-in-out duration-700 transition-opacity">
+    <p class="uppercase text-[#A6BCC7] font-medium text-center">you won!</p>
+    <p class=" uppercase font-medium text-4xl text-[#33C3BF] flex place-items-center justify-center mt-4"><span id="win"
+                                                                                                           class="text-6xl mr-2 font-black"></span>takes
+        the round</p>
+    <div class="flex justify-center mt-8">
+        <button class="bg-[#A6BCC7] uppercase shadow-2xl rounded-lg font-medium py-2 px-4 mr-8" id="quit">quit</button>
+        <button id="next-button" class="bg-[#ECAE35] uppercase shadow-2xl rounded-lg font-medium py-2 px-4 ">next round</button>
+        </div>
+</div>
+</body>
+<script src="scripts.js"></script>
+</html>
