@@ -37,18 +37,8 @@ function handleTurns() {
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
-            } else if (square[2] == '') {
-                answer = 2;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if (square[3] == '') {
-                answer = 3;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if (square[4] == '') {
-                answer = 4;
+            } else if (square[9] == '') {
+                answer = 9;
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
@@ -57,13 +47,8 @@ function handleTurns() {
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
-            } else if (square[6] == '') {
-                answer = 6;
-                square[answer] = document.getElementById('square' + answer);
-                square[answer].innerHTML = 'O';
-                square[answer].style.color = '#ECAE35';
-            } else if (square[7] == '') {
-                answer = 7;
+            } else if (square[2] == '') {
+                answer = 2;
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
@@ -72,8 +57,23 @@ function handleTurns() {
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
-            } else if (square[9] == '') {
-                answer = 9;
+            } else if (square[4] == '') {
+                answer = 4;
+                square[answer] = document.getElementById('square' + answer);
+                square[answer].innerHTML = 'O';
+                square[answer].style.color = '#ECAE35';
+            } else if (square[7] == '') {
+                answer = 7;
+                square[answer] = document.getElementById('square' + answer);
+                square[answer].innerHTML = 'O';
+                square[answer].style.color = '#ECAE35';
+            } else if (square[3] == '') {
+                answer = 3;
+                square[answer] = document.getElementById('square' + answer);
+                square[answer].innerHTML = 'O';
+                square[answer].style.color = '#ECAE35';
+            } else if (square[6] == '') {
+                answer = 6;
                 square[answer] = document.getElementById('square' + answer);
                 square[answer].innerHTML = 'O';
                 square[answer].style.color = '#ECAE35';
